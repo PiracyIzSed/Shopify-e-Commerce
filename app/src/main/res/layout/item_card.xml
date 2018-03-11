@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/md_keylines"
+    android:layout_marginLeft="@dimen/md_keylines"
+    android:layout_marginRight="@dimen/md_keylines"
+    card_view:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="200.0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_image"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="@dimen/md_keylines"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    tools:text="title" />
+
+                <TextView
+                    android:id="@+id/card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_title"
+                    android:layout_marginLeft="@dimen/md_keylines"
+                    android:layout_marginRight="@dimen/md_keylines"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10dp"
+                    tools:text="item_desc" />
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_text"
+                    android:layout_marginBottom="@dimen/md_keylines"
+                    android:layout_marginLeft="@dimen/md_keylines"
+                    android:layout_marginRight="@dimen/md_keylines"
+                    android:text="Rs.99999"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="12dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/wishlist_button"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_below="@+id/card_image"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_favorite_border_black_18dp"
+                android:focusable="false"
+
+                android:focusableInTouchMode="false"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
